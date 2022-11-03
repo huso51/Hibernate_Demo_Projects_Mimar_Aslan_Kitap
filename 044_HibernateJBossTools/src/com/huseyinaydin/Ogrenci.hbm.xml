@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping package="com.huseyinaydin">
+	<class name="com.huseyinaydin.Ogrenci" table="OGRENCI" catalog="denemevt">
+
+		<id name="ogrenciId" type="long">
+			<column name="OGRENCI_ID" />
+			<generator class="native" />
+		</id>
+
+		<property name="ogrenciAdi" type="string">
+			<column name="OGRENCI_ADI" length="50" not-null="true" unique="false" />
+		</property>
+
+		<component class="com.huseyinaydin.Adres" name="adres">
+			<property name="cadde" type="string">
+				<column name="CADDE" length="50" not-null="true" unique="false" />
+			</property>
+
+			<property name="sehir" type="string">
+				<column name="SEHIR" length="50" not-null="true" unique="false" />
+			</property>
+
+			<property name="sokak" type="string">
+				<column name="SOKAK" length="50" not-null="true" unique="false" />
+			</property>
+
+			<property name="postaKodu" type="string">
+				<column name="POSTA_KODU" length="50" not-null="true" unique="false" />
+			</property>
+		</component>
+
+	</class>
+</hibernate-mapping>

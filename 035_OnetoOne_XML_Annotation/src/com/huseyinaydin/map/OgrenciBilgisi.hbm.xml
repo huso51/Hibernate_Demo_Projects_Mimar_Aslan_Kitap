@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping>
+	<class name="com.huseyinaydin.map.Ogrenci" table="OGRENCI" catalog="denemevt">
+	
+		<id name="ogrenciId" type="java.lang.Integer">
+			<column name="OGRENCI_ID" />
+			<generator class="sequence"/>
+		</id>
+		
+		<property name="ogrenciAdi" type="string">
+			<column name="OGRENCI_ADI" length="50" not-null="true" unique="false"/>
+		</property>
+		
+		<property name="ogrenciSoyadi" type="string">
+			<column name="OGRENCI_SOYADI" length="50" not-null="true" unique="false"/>
+		</property>
+		
+		<one-to-one name="ogrenciBilgisi" class="com.huseyinaydin.map.OgrenciBilgisi" cascade="save-update">
+		
+		</one-to-one>
+		
+	</class>
+</hibernate-mapping>

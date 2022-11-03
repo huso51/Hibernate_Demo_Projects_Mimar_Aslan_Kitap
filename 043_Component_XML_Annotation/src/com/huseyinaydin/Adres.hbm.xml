@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping package="com.huseyinaydin">
+	<class name="com.huseyinaydin.Adres" table="ADRES" catalog="denemevt">
+	
+		<id name="adresId" type="long">
+			<column name="ADRES_ID" />
+			<generator class="native"/>
+		</id>
+		
+		<property name="cadde" type="string">
+			<column name="CADDE" length="50" not-null="true" unique="false"/>
+		</property>
+		
+		<property name="sehir" type="string">
+			<column name="SEHIR" length="50" not-null="true" unique="false"/>
+		</property>
+		
+		<property name="sokak" type="string">
+			<column name="SOKAK" length="50" not-null="true" unique="false"/>
+		</property>
+		
+		<property name="postaKodu" type="string">
+			<column name="POSTA_KODU" length="50" not-null="true" unique="false"/>
+		</property>
+		
+	</class>
+</hibernate-mapping>

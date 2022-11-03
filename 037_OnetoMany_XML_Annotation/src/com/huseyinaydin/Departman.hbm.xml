@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping package="com.huseyinaydin">
+	<class name="com.huseyinaydin.Departman" table="DEPARTMAN" catalog="denemevt">
+	
+		<id name="departmanId" type="java.lang.Long">
+			<column name="DEPARTMAN_ID" />
+			<generator class="native"/>
+		</id>
+		
+		<property name="departmanAdi" type="string">
+			<column name="DEPARTMAN_ADI" length="50" not-null="true" unique="false"/>
+		</property>
+		
+		<set name="calisan" table="CALISAN" inverse="true" lazy="true" fetch="select">
+			<key>
+				<column name="departman_id" not-null="true"/>
+			</key>
+			<one-to-many class="com.huseyinaydin.Calisan"/>
+		</set>
+		
+	</class>
+</hibernate-mapping>

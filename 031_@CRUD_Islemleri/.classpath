@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Hibernate"/>
+	<classpathentry kind="lib" path="C:/Users/husey/Desktop/Hib/mysql-connector-java-5.1.39/mysql-connector-java-5.1.39-bin.jar"/>
+	<classpathentry kind="lib" path="C:/Users/husey/eclipse/jee-neon/eclipse/db-derby-10.11.1.1-bin/lib/derbyclient.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files (x86)/PostgreSQL/pgJDBC/postgresql-9.4.1212.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping package="com.huseyinaydin">
+	<class name="com.huseyinaydin.Ogrenci" table="OGRENCI" catalog="denemevt">
+	
+		<id name="ogrenciId" type="long">
+			<column name="OGRENCI_ID" />
+			<generator class="native"/>
+		</id>
+		
+		<property name="ogrenciAdi" type="string">
+			<column name="OGRENCI_ADI" length="50" not-null="true" unique="false"/>
+		</property>
+		
+		<many-to-one cascade="all" name="adres" class="com.huseyinaydin.Adres" column="OGRENCI_ADRES" unique="false"/>
+		
+	</class>
+</hibernate-mapping>

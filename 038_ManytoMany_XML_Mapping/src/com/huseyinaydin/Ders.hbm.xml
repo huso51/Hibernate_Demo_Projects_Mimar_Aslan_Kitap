@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping package="com.huseyinaydin">
+	<class name="com.huseyinaydin.Ders" table="DERS" catalog="denemevt">
+	
+		<id name="dersId" type="long">
+			<column name="DERS_ID" />
+			<generator class="native"/>
+		</id>
+		
+		<property name="dersAdi" type="string">
+			<column name="DERS_ADI" length="50" not-null="true" unique="false"/>
+		</property>
+		
+	</class>
+</hibernate-mapping>

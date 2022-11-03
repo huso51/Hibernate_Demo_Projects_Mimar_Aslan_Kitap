@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping>
+	<class name="com.huseyinaydin.map.OgrenciBilgisi" table="OGRENCI_BILGISI" catalog="denemevt">
+	
+		<id name="ogrenciId" type="java.lang.Integer">
+			<column name="OGRENCI_ID" />
+			<generator class="foreign">
+				<param name="property">ogrenci</param>
+			</generator>
+		</id>
+		
+		<property name="adres" type="string">
+			<column name="ADRES" length="50" not-null="true" unique="false"/>
+		</property>
+		
+		<property name="kayitNo" type="string">
+			<column name="KAYIT_NO" length="50" not-null="true" unique="false"/>
+		</property>
+		
+		<property name="telefonNo" type="string">
+			<column name="TELEFON_NO" length="50" not-null="true" unique="false"/>
+		</property>
+		
+		<property name="email" type="string">
+			<column name="EMAIL" length="255" not-null="true" unique="false"/>
+		</property>
+		
+		<property name="dogumTarihi" type="date">
+			<column name="DOGUMTARIHI" length="10" not-null="true" unique="false"/>
+		</property>
+		
+		<property name="kayitTarihi" type="date">
+			<column name="KAYIT_TARIHI" length="10" not-null="true" unique="false"/>
+		</property>
+		
+		
+		<one-to-one name="ogrenci" class="com.huseyinaydin.map.Ogrenci" constrained="true">
+		
+		</one-to-one>
+		
+	</class>
+</hibernate-mapping>
